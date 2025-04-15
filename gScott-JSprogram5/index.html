@@ -11,7 +11,7 @@
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       
-      <style> .btn{margin: 5px} </style>
+      <style> .btn{margin: 5px } </style>
   </head>
   <body>
   
@@ -19,21 +19,21 @@
          <h2>Select a Menu</h2>
       
          <div style='padding: 5px;'>     
-            <button type='button' class="btn btn-primary" onClick="getData('CIT')">CIT Majors</button> 
-            <button type='button' class="btn btn-primary" onClick="getData('BUS')">BUS Majors</button> 
+            <button type='button' class="btn btn-outline-success" onClick="getData('CIT')">CIT Majors</button> 
+            <button type='button' class="btn btn-outline-success" onClick="getData('BUS')">BUS Majors</button> 
          </div>
       
   
-         <h3>Filter dataset by major</h3>
+         <h3>Filter dataset by student's major</h3>
          <div id="studentTable"></div>
                 
       
-            <p>Menu Data originally provided by  <a href='https://elearning.kctcs.edu/bbcswebdav/pid-58623171-dt-content-rid-491476932_2/xid-491476932_2'>cit5students.json</a></p>     
+            <p>Student Data provided by  <a href='https://elearning.kctcs.edu/bbcswebdav/pid-58623171-dt-content-rid-491476932_2/xid-491476932_2'>cit5students.json</a></p>     
      
      </div>   <!-- end class='container'   -->
 
   <!-- Handlebars template -->
-<script type="text/x-handlebars-template" id="menuTemplate">
+<script type="text/x-handlebars-template" id="majorTemplate">
 
    <table class="table table-striped">
       <tr><th>Name</th><th>Major</th><th>Midterm</th><th>final</th></tr>

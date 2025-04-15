@@ -7,7 +7,7 @@ async function getData(selected_major) {
         // filter data array for the selected meal
         major_items = data.filter( (item) => item.major == selected_major );  
 
-       var templateText = document.getElementById('menuTemplate').innerHTML;
+       var templateText = document.getElementById('majorTemplate').innerHTML;
        var compiledTemplateText = Handlebars.compile(templateText);   // get and compile template code
        compiledHtml = compiledTemplateText({ rows: major_items })      // apply data to template
        document.getElementById('studentTable').innerHTML = compiledHtml; 
