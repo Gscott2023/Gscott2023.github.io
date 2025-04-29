@@ -1,51 +1,71 @@
+body{
+	background-color: #bff9d7;
+}
+a{
+	font-family: "Lucida Console", "Courier New", monospace;
+	color:#006400;
+	font-size:15px;
+}
 h1 {
+	font-family: "Lucida Console", "Courier New", monospace;
     color: #008080;
     font-size: 50px;
     text-align: center;
 }
 h2 {
-	color:teal;
+	font-family: "Lucida Console", "Courier New", monospace;
+	color:#006400;
 	font-size:30px;
 	}
 p {
+	font-family: "Lucida Console", "Courier New", monospace;
     color: #006400;
     font-size: 18px;
     line-height: 1.6;
     padding: 10px;
 }
 li {
-	color:teal;
+	font-family: "Lucida Console", "Courier New", monospace;
+	color:#008080;
 	font-size:16px;
 	}
 table {
+	font-family: "Lucida Console", "Courier New", monospace;
   width: 100%;
   border-collapse: collapse;
 }
  
 th, td {
-  border: 1px solid #ddd;
+	font-family: "Lucida Console", "Courier New", monospace;
+  border: 1px solid #0e3e20;
   padding: 10px;
   text-align: left;
+  color: #008080;
 }
  
 th {
+	font-family: "Lucida Console", "Courier New", monospace;
   background-color: #138d75;
+  color: #01270f;
 }
 form {
+	font-family: "Lucida Console", "Courier New", monospace;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #bff9d7;
   border-radius: 8px;
 }
  
 label {
+	font-family: "Lucida Console", "Courier New", monospace;
   display: block;
   margin-top: 15px;
   font-weight: bold;
 }
  
 input, textarea {
+	font-family: "Lucida Console", "Courier New", monospace;
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -54,9 +74,10 @@ input, textarea {
 }
  
 button {
+	font-family: "Lucida Console", "Courier New", monospace;
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #0056b3;
+  background-color: #008080;
   color: black;
   border: none;
   border-radius: 5px;
@@ -66,36 +87,56 @@ button {
 button:hover {
   background-color: white;
 }
+video {
+    border: 2px solid #0e3e20;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+}
 .about {
-    border: 2px solid #ddd;
+	outline-style: dotted;
+    border: 2px solid #0e3e20;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
 }
+	.logo img {
+  border-radius: 10px;
+}
 @media (max-width: 200px) {
   .project {
-    border: 2px solid #ddd;
+	  outline-style: dotted;
+    border: 2px solid #0e3e20;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
   }
  
   .image-column, .description-column {
-    border: 2px solid #ddd;
+    border: 2px solid #0e3e20;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
   }
 }
 .skill {
+	outline-style: dotted;
     border: 2px solid #ddd;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
 }
 .contact {
-    border: 2px solid #ddd;
+	outline-style: dotted;
+    border: 2px solid #0e3e20;
     padding: 20px;
     margin: 20px auto;
     width: 80%;
 }
+.other_contacts {
+	outline-style: dotted;
+    border: 2px solid #0e3e20;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+  }
