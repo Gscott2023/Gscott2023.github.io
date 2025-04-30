@@ -42,10 +42,10 @@ table {
  
 th, td {
 	font-family: "Lucida Console", "Courier New", monospace;
-  border: 1px solid #0e3e20;
+  border: 1px solid #0e3e20 auto;
   margin: 0 auto;
   padding: 5px;
-  text-align: left auto;
+  text-align: left;
   color: #008080;
 }
  
