@@ -144,13 +144,6 @@ video {
     border: 2px solid #0e3e20;
     padding: 20px;
     margin: 20px auto;
-    width: 80%;
+    width: 80% auto;
+    height: 80% auto;
   }
-  .locate {
-  	outline-style: dotted;
-    border: 2px solid #0e3e20;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    height: 100%;
- }
