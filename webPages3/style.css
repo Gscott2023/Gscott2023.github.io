@@ -1,11 +1,9 @@
 body{
 	background-color: #bff9d7;
 }
-nav {
-	line-height: 1.6;
-	text-align: center;
-}
 a{
+  line-height: 1.6;
+	text-align: center;
 	font-family: "Lucida Console", "Courier New", monospace;
 	color:#006400;
 	font-size:18px;
