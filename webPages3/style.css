@@ -43,7 +43,8 @@ table {
 th, td {
 	font-family: "Lucida Console", "Courier New", monospace;
   border: 1px solid #0e3e20;
-  padding: 10px auto;
+  margin: 0 auto;
+  padding: 10px;
   text-align: left;
   color: #008080;
 }
