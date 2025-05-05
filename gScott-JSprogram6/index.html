@@ -28,7 +28,7 @@
     <h2>Tickets July 4, 2014</h2>
 
     <div v-show="showTable" ><!-- using the Bootstrap grid system to limit the-->
-
+            <div v-show="showTable" >
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>Ticket ID</th>
@@ -49,8 +49,9 @@
                         <td>{{ticket.violator_sex}}</td>
                     </tr>
                </table> 
-         </div>  
+            </div>  
     </div>  <!-- end class = 'row' - -->
+</div>
 <script>
     let app = Vue.createApp({
         data() { 
