@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" id = 'main'>
     <nav class="navbar navbar-inverse">
 
         <div class="navbar-header">
@@ -24,11 +24,10 @@
 
     </nav>    <!-- end nav-bar -->  
 
-    <div id = "ticketsApp">
-    <h2>Tickets July 4, 2014</h2>
 
-    <div v-show="showTable" ><!-- using the Bootstrap grid system to limit the-->
-            <div v-show="showTable" >
+    <h1>Tickets July 4, 2014</h1>
+
+    <div v-show="showTable">
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>Ticket ID</th>
@@ -39,7 +38,7 @@
                         <th>Age</th>
                         <th>Violator Sex</th>
                     </tr>
-                    <tr>
+                    <tr v-for="ticket in tickets">
                         <td>{{ticket.tid}}</td>
                         <td>{{ticket.actual_speed}}</td>
                         <td>{{ticket.posted_speed}}</td>
@@ -52,27 +51,6 @@
             </div>  
     </div>  <!-- end class = 'row' - -->
 </div>
-<script>
-    let app = Vue.createApp({
-        data() { 
-            return {
-                violations: [],
-            }
-        },
-        created() {      // section executes as page loads
-		    this.getData()  // load json data as page loads
-	    },
-        methods: {    // an object of functions (methods)
-            async getData() {
-                const response = await fetch('tickets1.json')
-                this.violations = await response.json()
-            },
-        }
-    
-    })
-
-    app.mount('#ticketsApp')
-
-</script>
+<script src = 'app.js'></script>
 
 </body></html>
