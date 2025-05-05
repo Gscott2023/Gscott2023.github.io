@@ -56,8 +56,7 @@
     let app = Vue.createApp({
         data() { 
             return {
-                results: [],
-                showTable: false
+                violations: [],
             }
         },
         created() {      // section executes as page loads
@@ -66,12 +65,13 @@
         methods: {    // an object of functions (methods)
             async getData() {
                 const response = await fetch('tickets1.json')
-                this.results = await response.json()
-                this.showTable = true
-            }
-        },
+                this.violations = await response.json()
+            },
+        }
     
     })
+
+    app.mount('#ticketsApp')
 
 </script>
 
