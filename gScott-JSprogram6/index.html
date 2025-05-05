@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html><head><title>All Tickets</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  <!-- vue.js -->
+    <!-- bootstrap, need to use https for these links -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -58,6 +59,12 @@
                 showTable: false
             }
         },
+        created() {      // section executes as page loads
+		    var d = new Date()
+		    this.time_loaded = d.toLocaleString()
+		
+		    this.getData()  // load json data as page loads
+	    },
         methods: {    // an object of functions (methods)
             async getData() {
                 const response = await fetch('tickets1.json')
