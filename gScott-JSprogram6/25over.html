@@ -67,17 +67,13 @@
     methods: {    // an object of functions (methods)
         async getData() {
             const response = await fetch('tickets1.json')
-            this.results = await response.json()
+            this.tickets = await response.json()
         },
     getBySpeed() {
-        if (results.actual_speed >= results.posted_speed + 25){
-            this.showTable = true
+            showTable: true
             return this.tickets.filter(ticket => (ticket.actual_speed - ticket.posted_speed) >= 25);
+    
         }
-        else{
-            this.showTable = false
-        }
-    }
     },
 })
 
