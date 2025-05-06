@@ -56,25 +56,24 @@
     let app = Vue.createApp({
     data() { 
         return {
-            results: [],
             tickets: [],
           // array to hold filtered data
-            showTable: true
+            showTable: false
         }
     },
     created() {      // section executes as page loads
-        this.getData()
-        this.getBySpeed()  // load json data as page loads
+        this.getData() // load json data as page loads
     },
     methods: {    // an object of functions (methods)
         async getData() {
             const response = await fetch('tickets1.json')
-            this.results = await response.json()
-        },
-        async getBySpeed() {
-            if (this.showTable = true){
-
-            return this.tickets = this.result.filter(ticket => (ticket.actual_speed - ticket.posted_speed) >= 25);
+             if(response.ok) {
+                 this.showTable = true
+                 var data = await response.json();
+                 this.tickets = this.data.filter(ticket => (ticket.actual_speed - ticket.posted_speed) >= 25);
+        }
+        else {
+       document.querySelector('#studentTable').innerHTML = "There was an error, or menu items not found";
         }
     }
 },
