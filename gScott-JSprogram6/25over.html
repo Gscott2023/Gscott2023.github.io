@@ -39,7 +39,7 @@
                         <th>Age</th>
                         <th>Violator Sex</th>
                     </tr>
-                    <tr v-for="ticket in over25">
+                    <tr v-for="ticket in tickets">
                         <td>{{ticket.tid}}</td>
                         <td>{{ticket.actual_speed}}</td>
                         <td>{{ticket.posted_speed}}</td>
@@ -56,10 +56,8 @@
     let app = Vue.createApp({
     data() { 
         return { 
-            tickets: [],
-            aSpeed: "actual_speed",
-            pSpeed: "posted_speed",
-            over25: [],           // array to hold filtered data
+            results: [],
+            tickets: [],           // array to hold filtered data
             showTable: false
         }
     },
@@ -69,12 +67,14 @@
     methods: {    // an object of functions (methods)
         async getData() {
             const response = await fetch('tickets1.json')
-            this.tickets = await response.json()
+            this.results = await response.json()
         },
     getBySpeed() {
+        let aSpeed = "actual_speed";
+        let pSpeed = "posted_speed";
         this.showTable = true
 
-        this.over25 = this.tickets.filter( (ticket) => ticket.aSpeed >= ticket.pSpeed + 25);
+        this.tickets = this.tickets.filter( (ticket) => ticket.aSpeed >= ticket.pSpeed + 25);
     }
     },
 })
