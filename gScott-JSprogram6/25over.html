@@ -74,9 +74,10 @@
         async getBySpeed() {
             if (this.showTable = true){
 
-            this.tickets = this.result.filter(ticket => (ticket.actual_speed - ticket.posted_speed) >= 25);
+            return this.tickets = this.result.filter(ticket => (ticket.actual_speed - ticket.posted_speed) >= 25);
         }
-    },
+    }
+},
 })
 
 app.mount('#main')
