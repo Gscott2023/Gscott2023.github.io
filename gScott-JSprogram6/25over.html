@@ -57,7 +57,8 @@
     data() { 
         return { 
             results: [],
-            tickets: [],           // array to hold filtered data
+            tickets: [],
+          // array to hold filtered data
             showTable: false
         }
     },
@@ -70,11 +71,8 @@
             this.results = await response.json()
         },
     getBySpeed() {
-        let aSpeed = "actual_speed";
-        let pSpeed = "posted_speed";
         this.showTable = true
-
-        this.tickets = this.tickets.filter( (ticket) => ticket.aSpeed >= ticket.pSpeed + 25);
+        this.tickets = this.results.filter( (ticket) => ticket.actual_speed >= ticket.posted_speed + 25);
     }
     },
 })
