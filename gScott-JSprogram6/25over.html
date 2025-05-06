@@ -58,7 +58,7 @@
         return {
             tickets: [],
           // array to hold filtered data
-            showTable: false
+            showTable: true
         }
     },
     created() {      // section executes as page loads
@@ -68,11 +68,7 @@
         async getData() {
             const response = await fetch('tickets1.json')
             this.tickets = await response.json()
-        },
-    getBySpeed() {
-            showTable: true
             return this.tickets.filter(ticket => (ticket.actual_speed - ticket.posted_speed) >= 25);
-    
         }
     },
 })
