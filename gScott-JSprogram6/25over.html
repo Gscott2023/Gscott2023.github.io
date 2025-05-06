@@ -57,6 +57,8 @@
     data() { 
         return { 
             tickets: [],
+            aSpeed: "actual_speed",
+            pSpeed: "posted_speed",
             over25: [],           // array to hold filtered data
             showTable: false
         }
@@ -72,7 +74,7 @@
     getBySpeed() {
         this.showTable = true
 
-        this.over25 = this.tickets.filter( (ticket) => ticket.actual_speed >= ticket.posted_speed + 25);
+        this.over25 = this.tickets.filter( (ticket) => ticket.aSpeed >= ticket.pSpeed + 25);
     }
     },
 })
