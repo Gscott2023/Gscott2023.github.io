@@ -71,8 +71,13 @@
             this.results = await response.json()
         },
     getBySpeed() {
-        this.showTable = true
-        this.tickets = this.results.filter( (ticket) => ticket.actual_speed >= ticket.posted_speed + 25);
+        if (results.actual_speed >= results.posted_speed + 25){
+            this.showTable = true
+            this.tickets = this.results.filter( (ticket) => ticket.actual_speed == results.actual_speed );
+        }
+        else{
+            this.showTable = false
+        }
     }
     },
 })
