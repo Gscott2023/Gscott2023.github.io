@@ -55,8 +55,7 @@
 <script>
     let app = Vue.createApp({
     data() { 
-        return { 
-            results: [],
+        return {
             tickets: [],
           // array to hold filtered data
             showTable: false
@@ -71,9 +70,13 @@
             this.results = await response.json()
         },
     getBySpeed() {
+        if (results.actual_speed >= results.posted_speed + 25){
             this.showTable = true
-            this.tickets = this.results.filter(ticket => (ticket.actual_speed - ticket.posted_speed) >= 25);
-
+            return this.tickets.filter(ticket => (ticket.actual_speed - ticket.posted_speed) >= 25);
+        }
+        else{
+            this.showTable = false
+        }
     }
     },
 })
