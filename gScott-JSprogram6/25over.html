@@ -28,7 +28,7 @@
 
     <h1>Tickets July 4, 2014; 25 MPH or More Over the Limit</h1>
 
-    <div v-show="showTable" v-model="getData">
+    <div v-show="showTable">
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>Ticket ID</th>
@@ -39,7 +39,7 @@
                         <th>Age</th>
                         <th>Violator Sex</th>
                     </tr>
-                    <tr v-for="ticket in tickets">
+                    <tr v-for="ticket in data">
                         <td>{{ticket.tid}}</td>
                         <td>{{ticket.actual_speed}}</td>
                         <td>{{ticket.posted_speed}}</td>
