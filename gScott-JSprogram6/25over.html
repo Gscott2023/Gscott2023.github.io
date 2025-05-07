@@ -73,7 +73,7 @@
                  this.tickets = this.data.filter(ticket => (ticket.actual_speed - ticket.posted_speed) >= 25);
         }
         else {
-       document.querySelector('#studentTable').innerHTML = "There was an error, or menu items not found";
+            this.showTable = false
         }
     }
 },
